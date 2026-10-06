@@ -15,7 +15,9 @@ const app = Vue.createApp({
                 { name: 'john', age: 30 },
                 { name: 'jane', age: 25 },
                 { name: 'bob', age: 40 }
-            ]
+            ],
+            age: 0,
+            name: ''
         }
     },
     methods: {
@@ -28,6 +30,9 @@ const app = Vue.createApp({
         },
         skjulListe() {
             this.skjul = !this.skjul
+        },
+        addperson() {
+            this.ListeNavne.push({ name: this.name, age: this.age })
         }
     },
     computed: {

@@ -33,7 +33,11 @@
       <div v-for="item in ListeNavne" :key="item.name">
         <h1>{{ item.name }} is {{ item.age }} years old.</h1>
       </div>
-
+       <input v-model="name" placeholder="Enter name"/>
+      <input v-model="age" placeholder="Enter age"/>
+     
+      <button @click="addperson" >Add Person</button>
+    </div>
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
