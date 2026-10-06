@@ -15,7 +15,25 @@
 
       <h1>{{ intro }}</h1>
       
-    </div>
+      <h1 v-for="item in Liste" :key="item.id">{{item.name}}</h1>
+
+      <div v-for="item in Liste" :key="item.id">
+        <p v-if="item.id === 1" class="Wtf">{{item.name}}</p>
+        <p v-else class="normal">{{item.name}}</p>
+      </div>
+
+      <h1 v-for="item in Liste2" :key="item" v-show="skjul">{{item}} </h1>
+
+      <input v-model="Nr" placeholder="Enter"/>
+      <button @click="add">Click me</button>
+      <p>Button clicked {{ Nr2 }} times.</p>
+      <button @click="skjulListe">Skjul Liste</button>
+
+
+      <div v-for="item in ListeNavne" :key="item.name">
+        <h1>{{ item.name }} is {{ item.age }} years old.</h1>
+      </div>
+
 
     <!-- Import App -->
     <script src="./js/main.js"></script>
